@@ -1,0 +1,93 @@
+INSERT INTO users (user_email, user_encrypted_password)
+VALUES ('Sam_Kirby@duo.com', 'Testing1'),
+       ('Mac_Bunny@duo.com', 'Testing2'),
+       ('Randy_Low@duo.com', 'Testing3'),
+       ('Hannah_Noah@duo.com', 'Testing4'),
+       ('Daniel_Silverwater@duo.com', 'Testing5'),
+       ('Mars_Barson@duo.com', 'Testing6'),
+       ('Roshan_Rhodes@duo.com', 'Testing7'),
+       ('Lenny_Rhodes@duo.com', 'Testing8'),
+       ('Brian_Silverwater@duo.com', 'Testing9');
+
+INSERT INTO language (language_name)
+VALUES ('Spanish'),
+       ('English'),
+       ('French'),
+       ('German'),
+       ('Urdu'),
+       ('Yoruba'),
+       ('Italian'),
+       ('Greek'),
+       ('Portuguese');
+
+INSERT INTO country (country_name, country_code)
+VALUES ('United_Kingdom','UK'),
+       ('France','FR'),
+       ('Nigeria','NG'),
+       ('Spain','ES'),
+       ('Portugal','PT'),
+       ('Germany','DE'),
+       ('Italy', 'IT'),
+       ('Pakistan', 'PK'),
+       ('Brasil', 'BR');
+
+INSERT INTO profile (profile_Fname, profile_Lname, profile_username, user_id, country_id)
+VALUES ('Sam', 'Kirby', 'SamK_1', 1, 1),
+       ('Mac', 'Bunny', 'MacB_2', 2, 2),
+       ('Randy', 'Low', 'RandyL_3', 3, 6),
+       ('Hannah', 'Noah', 'HannahN_4', 4, 5),
+       ('Daniel', 'Silverwater', 'DanielS_5', 5, 4),
+       ('Mars', 'Barson', 'MArsB_6', 6, 6),
+       ('Roshan', 'Rhodes', 'RoshanR_7', 7, 8),
+       ('Lenny', 'Rhodes', 'LennyR_8', 8, 9),
+       ('Brian', 'Silverwater', 'BrianS_9', 9, 4);
+
+INSERT INTO user_languages (user_id, language_id)
+VALUES (1, 4),
+       (1, 5),
+       (2, 1),
+       (3, 2),
+       (3, 6),
+       (4, 2),
+       (4, 7),
+       (5, 7),
+       (5, 9),
+       (6, 5),
+       (7, 1),
+       (8, 4),
+       (9, 7);
+
+INSERT INTO duo_facts (fact_details, language_id)
+VALUES ('There are around 220 million French speakers worldwide', 3),
+       ('French is an official language in 29 countries, such as France, Belgium, Canada, Luxembourg, Switzerland, Congo, Mali, Senegal, and it is spoken on every continent',3),
+       ('About 45% of modern English words are of French origin', 3),
+       ('About 45% of modern English words are of French origin', 2),
+       ('The literary integrity of the French language has been preserved by the Académie Française since its creation in 1634 by Cardinal Richelieu.',3 ),
+       ('French Is The 6th Most Spoken Language In The World', 3),
+       ('French Doesn’t Have Any Words With “W”', 3),
+       ('Spanish is an official language in 29 countries', 1),
+       ('There are words in Spanish that cannot be translated in one word in English. An example is empalagarse (to feel sick because of too much sweetness in food, but also figuratively, as in romantic situations)', 1),
+       ('Mexico contains the largest population of Spanish speakers with 114 million', 1),
+       ('“I am” is the shortest complete sentence in the English language', 2),
+       ('A pangram sentence is one that contains every letter in the language. For example, the sentence “The quick brown fox jumps over the lazy dog” is a pangram.', 2),
+       ('Chaucer was the first writer who chose to write in English, although it is an English that might sound pretty foreign to us.', 2),
+       ('China has more English speakers than the United States.', 2),
+       ('German uses the Latin alphabet. It has, however, an additional consonant: the ß, called Eszett ', 4),
+       ('In German, nouns are capitalized.', 4),
+       ('The letters in Urdu are derived from the Persian/Farsi alphabet, which is derived from the Arabic alphabet. ', 5),
+       ('Two very respected poets who are not only celebrated in the Indian subcontinent but are famous in many other communities worldwide are Mirza Ghalib and Sir Mohammad Iqbal.', 5),
+       ('Urdu became a unifying symbol for Muslims during the 19th-century tensions and the colonization by the British Empire.', 5),
+       ('The ethnic group of Yoruba inhabits western Africa. The majority of them can be found in Nigeria.', 6),
+       ('Religion plays an important role among Yoruba people. Spirituality is also considered an important part of their daily lives.', 6),
+       ('The Yoruba have more twins than anywhere else in the world and their genetics are to be credited for that. The word for twin being "Ibeji"', 6),
+       ('Over the years, Yoruba has had different writing systems. In the 17th century, the influence of Muslims meant the introduction of Ajami script. But today, the Latin alphabet is used for the writing. However, it is modified according to the requirements of the Yoruba language.', 6),
+       ('Italian became an official language in 1861', 7),
+       ('The Italian alphabet only has 21 letters', 7),
+       ('The word ‘America’ comes from Italian; named after Amerigo Vespucci.', 7),
+       ('The language we now call Standard Italian derives from 13th-century Tuscan, or Florentine, to be specific.', 7),
+       (' Until 1976, there were two different official versions of Greek. Demotic was used in most casual contexts, as well as in literature. Katharevousa, on the other hand, was used in academia, law, medicine, newspapers, and the armed forces', 8),
+       (' The Greek alphabet was the first to use vowels.', 8),
+       ('Ancient Greek, like modern-day Hebrew and Arabic, was written from right to left', 8),
+       ('Portuguese is the official language in nine different countries: Portugal, Brazil, Mozambique, Angola, Guinea-Bissau, Timor-Leste, Equatorial Guinea, Cape Verde, and São Tomé and Principe. ', 9),
+       ('Only 5% of Portuguese speakers live in Portugal.', 9),
+       ('The roots of the Portuguese language are based in the autonomous community of Galicia, in the north of Portugal and the northwest of Spain.', 9);
