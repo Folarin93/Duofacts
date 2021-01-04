@@ -7,8 +7,8 @@ def users_index():
     #Return all users
     sql = "SELECT * FROM users"
     cursor.execute(sql)
-    books = cursor.fetchall()
-    return jsonify(books)
+    users = cursor.fetchall()
+    return jsonify(users)
 
 # @users.route("/books", methods=["POST"])
 # def book_create():
