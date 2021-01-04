@@ -1,11 +1,16 @@
+#Loading environment vairables
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, request, jsonify, abort
+#Flask application creation
+from flask import Flask
 app = Flask(__name__)
 
+#Database connection
+from database import init_db
+db = init_db(app)
 
+#Controller Registration
 from controllers import registerable_controllers
-
 for controller in registerable_controllers:
     app.register_blueprint(controller)
