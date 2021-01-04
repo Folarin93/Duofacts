@@ -5,8 +5,7 @@ from flask import Flask, request, jsonify, abort
 app = Flask(__name__)
 
 
-from users import users
-app.register_blueprint(users)
+from controllers import registerable_controllers
 
-from duo_fact import duo_fact
-app.register_blueprint(duo_fact)
+for controller in registerable_controllers:
+    app.register_blueprint(controller)
