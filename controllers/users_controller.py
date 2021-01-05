@@ -1,14 +1,16 @@
-from database import cursor, connection
+from models.Users import User
+from main import db
 from flask import Blueprint, request, jsonify, abort
 users = Blueprint("users", __name__)
 
 @users.route("/users", methods=["GET"])
 def users_index():
+    pass
     #Return all users
-    sql = "SELECT * FROM users"
-    cursor.execute(sql)
-    users = cursor.fetchall()
-    return jsonify(users)
+    # sql = "SELECT * FROM users"
+    # cursor.execute(sql)
+    # users = cursor.fetchall()
+    # return jsonify(users)
 
 # @users.route("/books", methods=["POST"])
 # def book_create():

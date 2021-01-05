@@ -44,7 +44,7 @@ CREATE TABLE user_languages (
 
 CREATE TABLE duo_facts (
   fact_id SERIAL PRIMARY KEY,
-  fact_details TEXT,
+  fact_details TEXT not null,
   language_id SERIAL not null,
   CONSTRAINT languageFK FOREIGN KEY (language_id)
   REFERENCES language (language_id)
