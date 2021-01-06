@@ -5,3 +5,4 @@ class User(db.Model):
 
     user_id = db.Column(db.Integer, primary_key=True)
     user_email = db.Column(db.String(), nullable=False)
+    user_encrypted_password = db.Column(db.String(), nullable=False)
