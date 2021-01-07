@@ -20,10 +20,6 @@ def user_create():
     #Create a new user
     user_data = User_schema.load(request.json)
 
-    # if (user_data["user_email"] == "" or user_data["user_encrypted_password"] == ""):
-    #     return abort(400, "Invalid Email/Password")
-
-    # else:
     new_user = User()
     new_user.user_email = user_data["user_email"]
     new_user.user_encrypted_password = user_data["user_encrypted_password"]
