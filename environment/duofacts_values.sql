@@ -1,13 +1,13 @@
-INSERT INTO users (user_email, user_encrypted_password)
-VALUES ('Sam_Kirby@duo.com', 'Testing1'),
-       ('Mac_Bunny@duo.com', 'Testing2'),
-       ('Randy_Low@duo.com', 'Testing3'),
-       ('Hannah_Noah@duo.com', 'Testing4'),
-       ('Daniel_Silverwater@duo.com', 'Testing5'),
-       ('Mars_Barson@duo.com', 'Testing6'),
-       ('Roshan_Rhodes@duo.com', 'Testing7'),
-       ('Lenny_Rhodes@duo.com', 'Testing8'),
-       ('Brian_Silverwater@duo.com', 'Testing9');
+INSERT INTO users (user_email, user_encrypted_password, user_Fname, user_Lname, user_username)
+VALUES ('Sam_Kirby@duo.com', 'Testing1', 'Sam', 'Kirby', 'SamK_1'),
+       ('Mac_Bunny@duo.com', 'Testing2', 'Mac', 'Bunny', 'MacB_2'),
+       ('Randy_Low@duo.com', 'Testing3', 'Randy', 'Low', 'RandyL_3'),
+       ('Hannah_Noah@duo.com', 'Testing4', 'Hannah', 'Noah', 'HannahN_4'),
+       ('Daniel_Silverwater@duo.com', 'Testing5', 'Daniel', 'Silverwater', 'DanielS_5'),
+       ('Mars_Barson@duo.com', 'Testing6','Mars', 'Barson', 'MArsB_6'),
+       ('Roshan_Rhodes@duo.com', 'Testing7','Roshan', 'Rhodes', 'RoshanR_7'),
+       ('Lenny_Rhodes@duo.com', 'Testing8','Lenny', 'Rhodes', 'LennyR_8'),
+       ('Brian_Silverwater@duo.com', 'Testing9','Brian', 'Silverwater', 'BrianS_9');
 
 INSERT INTO language (language_name)
 VALUES ('Spanish'),
@@ -20,27 +20,16 @@ VALUES ('Spanish'),
        ('Greek'),
        ('Portuguese');
 
-INSERT INTO country (country_name, country_code)
-VALUES ('United_Kingdom','UK'),
-       ('France','FR'),
-       ('Nigeria','NG'),
-       ('Spain','ES'),
-       ('Portugal','PT'),
-       ('Germany','DE'),
-       ('Italy', 'IT'),
-       ('Pakistan', 'PK'),
-       ('Brasil', 'BR');
-
-INSERT INTO profile (profile_Fname, profile_Lname, profile_username, user_id, country_id)
-VALUES ('Sam', 'Kirby', 'SamK_1', 1, 1),
-       ('Mac', 'Bunny', 'MacB_2', 2, 2),
-       ('Randy', 'Low', 'RandyL_3', 3, 6),
-       ('Hannah', 'Noah', 'HannahN_4', 4, 5),
-       ('Daniel', 'Silverwater', 'DanielS_5', 5, 4),
-       ('Mars', 'Barson', 'MArsB_6', 6, 6),
-       ('Roshan', 'Rhodes', 'RoshanR_7', 7, 8),
-       ('Lenny', 'Rhodes', 'LennyR_8', 8, 9),
-       ('Brian', 'Silverwater', 'BrianS_9', 9, 4);
+-- INSERT INTO country (country_name, country_code)
+-- VALUES ('United_Kingdom','UK'),
+--        ('France','FR'),
+--        ('Nigeria','NG'),
+--        ('Spain','ES'),
+--        ('Portugal','PT'),
+--        ('Germany','DE'),
+--        ('Italy', 'IT'),
+--        ('Pakistan', 'PK'),
+--        ('Brasil', 'BR');
 
 INSERT INTO user_languages (user_id, language_id)
 VALUES (1, 4),
