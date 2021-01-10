@@ -1,7 +1,7 @@
 from main import ma
 from models.User_languages import User_languages
-from schemas.User_Schema import User_Schema
-from schemas.Language_Schema import Language_Schema
+from schemas.User_Schema import User_schema
+from schemas.Language_Schema import Language_schema
 
 class User_languages_Schema(ma.SQLAlchemyAutoSchema):
     class Meta:

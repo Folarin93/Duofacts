@@ -7,6 +7,7 @@ from schemas.Language_Schema import Language_Schema
 class Duo_fact_Schema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Duo_fact
+        load_only = ["fact_id"]
 
     details = ma.String(required=True, validate=Length(min=1))
     # language =  ma.Nested(Language_Schema)

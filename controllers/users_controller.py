@@ -2,38 +2,18 @@ from models.Users import User
 from main import db
 from flask import Blueprint, request, jsonify, abort
 from schemas.User_Schema import User_schema, Users_schema
+from schemas.Language_Schema import Language_schema
+from schemas.Users_languages_Schema import Users_languages_schema
+from flask_jwt_extended import jwt_required, get_jwt_identity
+from services.auth_service import verify_user
+from sqlalchemy.orm import joinedload
 users = Blueprint("users", __name__)
 
-@users.route("/users", methods=["GET"])
-def users_index():
-    #Return all users
-    users = User.query.all()
-    serialised_data = Users_schema.dump(users)
-    return jsonify(serialised_data)
-    # sql = "SELECT * FROM users"
-    # cursor.execute(sql)
-    # users = cursor.fetchall()
-    # return jsonify(users)
-
-@users.route("/users", methods=["POST"])
-def user_create():
-    #Create a new user
-    user_data = User_schema.load(request.json)
-
-    new_user = User()
-    new_user.email = user_data["email"]
-    new_user.password = user_data["password"]
-    new_user.username = user_data["username"]
-
-    db.session.add(new_user)
-    db.session.commit()
-
-    return jsonify(User_schema.dump(new_user))
-
-
-# @users.route("/auth/login", methods=["GET"])
-# def user_login():
-#     pass
+@users.route("/", methods=["GET"])
+@jwt_required
+@verify_user
+def user_languages():
+    pass
 
 # @users.route("/auth/logout", methods=["GET"])
 # def user_logout():
