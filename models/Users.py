@@ -1,4 +1,5 @@
 from main import db
+# from models.User_languages import User_languages
 
 
 class User(db.Model):
@@ -10,6 +11,7 @@ class User(db.Model):
     Fname = db.Column(db.String())
     Lname = db.Column(db.String())
     username = db.Column(db.String(), nullable=False)
+    # user_languages = db.relationship("User_languages", backref="user", lazy="dynamic")
     
 
     # def __repr__(self):

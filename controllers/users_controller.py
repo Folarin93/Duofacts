@@ -21,8 +21,9 @@ def user_create():
     user_data = User_schema.load(request.json)
 
     new_user = User()
-    new_user.user_email = user_data["user_email"]
-    new_user.user_encrypted_password = user_data["user_encrypted_password"]
+    new_user.email = user_data["email"]
+    new_user.password = user_data["password"]
+    new_user.username = user_data["username"]
 
     db.session.add(new_user)
     db.session.commit()

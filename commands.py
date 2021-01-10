@@ -1,18 +1,19 @@
 from main import db
 from flask import Blueprint
 
-db_commands = Blueprint("db", __name__)
+db_commands = Blueprint("db-custom", __name__)
 
-@db_commands.cli.command("create")
-def create_db():
-    from models import Duo_facts, Language, User_languages, Users
-    db.create_all()
-    print("Tables created!")
+# @db_commands.cli.command("create")
+# def create_db():
+#     from models import Duo_facts, Language, User_languages, Users
+#     db.create_all()
+#     print("Tables created!")
 
 @db_commands.cli.command("drop")
 def drop_db():
     from models import Duo_facts, Language, User_languages, Users
     db.drop_all()
+    db.engine.execute("DROP TABLE IF EXISTS alembic_version;")
     print("Tables deleted")
 
 @db_commands.cli.command("seed")
@@ -21,6 +22,7 @@ def seed_db():
     from models.User_languages import User_languages
     from models.Language import Languages
     from models.Duo_facts import Duo_fact
+    from main import bcrypt
     from faker import Faker
     import random
 
@@ -32,7 +34,7 @@ def seed_db():
     for i in range(10):
         user = User()
         user.email =  f"test{i}@test.com"
-        user.password = f"password{i}"
+        user.password = bcrypt.generate_password_hash(f"password{i}").decode("utf-8")
         user.Fname = f"FName{i}"
         user.Lname = f"LName{i}"
         user.username = f"Username{i}"
