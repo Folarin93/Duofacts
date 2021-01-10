@@ -6,7 +6,7 @@ class User_Schema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = User
 
-    user_email = ma.String(required=True, validate=Email())
+    user_email = ma.String(required=True, validate=[Length(min=5), Email()])
     user_encrypted_password = ma.String(required=True, validate=Length(8))
 
 User_schema = User_Schema()

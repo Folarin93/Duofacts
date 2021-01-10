@@ -6,14 +6,12 @@ db_commands = Blueprint("db", __name__)
 @db_commands.cli.command("create")
 def create_db():
     db.create_all()
-    print("Tables Created")
-
+    print("Tables created!")
 
 @db_commands.cli.command("drop")
 def drop_db():
     db.drop_all()
-    print("Tables Drop")
-
+    print("Tables deleted")
 
 # @db_commands.cli.command("seed")
 # def seed_db():

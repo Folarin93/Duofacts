@@ -1,4 +1,3 @@
-
 from main import ma
 from models.Duo_facts import Duo_fact
 

@@ -29,6 +29,39 @@ def user_create():
 
     return jsonify(User_schema.dump(new_user))
 
+
+# @users.route("/auth/login", methods=["GET"])
+# def user_login():
+#     pass
+
+# @users.route("/auth/logout", methods=["GET"])
+# def user_logout():
+#     pass
+
+# @users.route("/user/<int:id>", methods=["GET"])
+# def user_profile():
+#     pass
+
+# @users.route("/user/<int:id>", methods=["PUT", "PATCH"])
+# def user_update(id):
+#     pass
+
+# @users.route("/user/<int:id>/languages", methods=["GET"])
+# def user_languages(id):
+#     pass
+
+# @users.route("/user/<int:id>/languages/<int:id>", methods=["POST"])
+# def user_add_languages(id):
+#     pass
+
+# @users.route("/user/<int:id>/languages/<int:id>", methods=["DELETE"])
+# def user_del_languages(id):
+#     pass
+
+# @users.route("/user/<int:id>/languages/<int:id>", methods=["GET"])
+# def get_duofact(id):
+#     pass
+
 #     sql = "INSERT INTO books (title) VALUES (%s);"
 #     cursor.execute(sql, (request.json["title"],))
 #     connection.commit()
